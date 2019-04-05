@@ -4,6 +4,10 @@ defaults write com.apple.dock tilesize -int 35; killall Dock
 ## Auto-hide Dock
 defaults write com.apple.dock autohide -int 1
 
+## Make fonts not look terrible on non-retina monitors
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
 ## show path and status bars in finder
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
