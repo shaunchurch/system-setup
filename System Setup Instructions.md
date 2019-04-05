@@ -1,13 +1,4 @@
-# Setup steps
-
-## Guides and Source material
-
-Steps from various guides, eg:
-https://github.com/drduh/macOS-Security-and-Privacy-Guide#basics
-https://github.com/donnemartin/dev-setup#single-setup-script
-
-
-## Post install steps
+# Setup
 
 - install macOS 
 - enable firewall
@@ -18,17 +9,13 @@ https://github.com/donnemartin/dev-setup#single-setup-script
 (brew will install Command Line Tools during installation)
 
 ## Run default settings script
-- $ chmod +x set-defaults.sh
-- $ ./set-defaults.sh
+- `$ chmod +x set-defaults.sh`
+- `$ ./set-defaults.sh`
 
 ## Brew installations
+Run `$ brew bundle` in the directoy with the Brewfile
 
-run `$ brew bundle` in the directoy with the Brewfile
-
-## Brew cask installations
-
-
-## App store installations
-
-
-## Customisations and configuration
+## Guides and Source material
+Steps from various guides, eg:
+https://github.com/drduh/macOS-Security-and-Privacy-Guide#basics
+https://github.com/donnemartin/dev-setup#single-setup-script
