@@ -34,6 +34,7 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'flux'
 cask 'twist'
+cask 'the-unarchiver'
 
 # Tweetbot
 #mas install 1384080005
