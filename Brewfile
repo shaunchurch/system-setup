@@ -33,6 +33,13 @@ cask 'brave-browser'
 cask 'firefox'
 cask 'google-chrome'
 cask 'flux'
+cask 'twist'
 
 # Tweetbot
-#mas install 808809998 
+#mas install 1384080005
+# WhatsApp Desktop
+#mas install 1147396723
+#Textual
+#mas install 1262957439
+#Airmail
+#mas install 918858936
