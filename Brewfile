@@ -37,6 +37,7 @@ cask 'twist'
 cask 'the-unarchiver'
 cask 'sketch'
 cask 'dash'
+cask 'neovim'
 
 # Tweetbot
 #mas install 1384080005
