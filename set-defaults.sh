@@ -5,8 +5,18 @@ defaults write com.apple.dock tilesize -int 35; killall Dock
 defaults write com.apple.dock autohide -int 1
 
 ## Make fonts not look terrible on non-retina monitors
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# Enable subpixel font rendering on non-Apple LCDs
+# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+# defaults write NSGlobalDomain AppleFontSmoothing -int 1
+
+# Fix FontSmoothing in vscode only
+# see: https://github.com/Microsoft/vscode/issues/59887#issuecomment-449636774
+defaults write com.microsoft.VSCodeInsiders CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCodeInsiders.helper CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCodeInsiders.helper.EH CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCodeInsiders.helper.NP CGFontRenderingFontSmoothingDisabled 0
 
 ## show path and status bars in finder
 defaults write com.apple.finder ShowPathbar -bool true
@@ -69,10 +79,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Enable subpixel font rendering on non-Apple LCDs
-# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
