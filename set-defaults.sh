@@ -74,7 +74,8 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# this no longer works on new systems, if you'd unloaded it run the same command with loads instead of unload. 
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
